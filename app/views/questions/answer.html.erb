@@ -1,11 +1,19 @@
-
-<%= @answer %>
-<p><em>-You</em></p>
-
-<% if @answer.include?("?") %>
-<p>'Silly question, bitch!</p>
-<% else %>
-<p>'I don't care, plebe!</p>
-<% end %>
-<p><em>-Coach</em></p>
-<%= link_to 'Back', ask_path %>
+<div class="container">
+  <div class="m-4">
+    <div class="message-box user">
+      <p>"<%= @answer %>"</p>
+      <p><em>- You</em></p>
+    </div>
+    <div class="message-box coach">
+      <% if @answer.include?("?") %>
+      <p>"Silly question, scoundrel!"</p>
+      <% else %>
+      <p>"I don't care, plebe!"</p>
+       <% end %>
+      <p><em>- Coach</em></p>
+    </div>
+    <div class="text-center">
+      <button class="btn btn-primary"><%= link_to 'Back', ask_path %></button>
+    </div>
+  </div>
+</div>
