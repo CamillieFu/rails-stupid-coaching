@@ -5,7 +5,9 @@
       <p><em>- You</em></p>
     </div>
     <div class="message-box coach">
-      <% if @answer.include?("?") %>
+      <% if @answer.include?("I am going to work") %>
+      <p>"Damn straight you are! Get that money ayyy!"</p>
+      <% elsif @answer.include?("?") %>
       <p>"Silly question, scoundrel!"</p>
       <% else %>
       <p>"I don't care, plebe!"</p>
@@ -13,7 +15,7 @@
       <p><em>- Coach</em></p>
     </div>
     <div class="text-center">
-      <button class="btn btn-primary"><%= link_to 'Back', ask_path %></button>
+      <button class="btn btn-primary"><%= link_to 'Ask a New Question', ask_path %></button>
     </div>
   </div>
 </div>
